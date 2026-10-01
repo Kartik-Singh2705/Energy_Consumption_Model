@@ -1,0 +1,37 @@
+{
+  "split_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "lags": [
+    1,
+    2,
+    3,
+    24,
+    48,
+    168
+  ],
+  "rolling_windows": [
+    6,
+    24,
+    168
+  ],
+  "correlation_threshold": 0.95,
+  "top_k": 15,
+  "short_gap_limit_hours": 6,
+  "seasonal_fill_lag": 168,
+  "look_back_hours": 24,
+  "horizons": [
+    1,
+    24,
+    168
+  ],
+  "hidden_size": 64,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "early_stopping_patience": 10,
+  "random_seed": 42,
+  "shap_background_size": 100,
+  "shap_eval_samples": 200
+}

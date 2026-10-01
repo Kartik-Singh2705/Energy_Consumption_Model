@@ -1,0 +1,5 @@
+issue_type,column,count_found,count_fixed,method
+duplicate_timestamp,Timestamp,150,150,mean
+time_gap,Timestamp,40,40,regular_hourly_index
+extreme_spike,Consumption,6,6,rolling/interpolation
+missing_values,numeric,3791,3791,time_interpolation_then_seasonal_fill

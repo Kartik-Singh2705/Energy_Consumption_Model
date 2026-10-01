@@ -1,0 +1,13 @@
+{
+  "dataset": "home_c",
+  "model": "LSTM",
+  "lookback": 24,
+  "epochs": 1,
+  "train_windows": 500,
+  "eval_rows": 1000,
+  "MAE": 0.4026663154349674,
+  "RMSE": 0.5689755603157297,
+  "final_train_loss": 0.8564183673858643,
+  "runtime_seconds": 0.6,
+  "seed": 42
+}

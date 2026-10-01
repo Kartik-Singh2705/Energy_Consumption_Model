@@ -1,0 +1,29 @@
+{
+  "dataset": "building_b",
+  "rows_before": 17595,
+  "rows_after_cleaning": 17520,
+  "train_rows": 12146,
+  "validation_rows": 2603,
+  "test_rows": 2603,
+  "top_features": [
+    "lag_1",
+    "Occupancy_Index",
+    "hour_cos",
+    "lag_168",
+    "Solar_Radiation_Wm2",
+    "Electricity_Price",
+    "Hour",
+    "roll_max_6",
+    "hour_sin",
+    "roll_mean_168",
+    "Temperature_F",
+    "Rainfall_mm",
+    "roll_max_24",
+    "Random_Noise_B",
+    "roll_std_6"
+  ],
+  "runtime_seconds": 1.28,
+  "seed": 42,
+  "synthetic_data": true,
+  "timestamp": "2026-10-01T05:58:52.293442+00:00"
+}

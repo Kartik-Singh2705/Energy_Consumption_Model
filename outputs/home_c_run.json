@@ -1,0 +1,29 @@
+{
+  "dataset": "home_c",
+  "rows_before": 17590,
+  "rows_after_cleaning": 17520,
+  "train_rows": 12146,
+  "validation_rows": 2603,
+  "test_rows": 2603,
+  "top_features": [
+    "Hour",
+    "Electricity_Price",
+    "hour_sin",
+    "lag_24",
+    "Is_Weekend",
+    "lag_1",
+    "lag_168",
+    "roll_mean_24",
+    "hour_cos",
+    "roll_mean_6",
+    "roll_max_6",
+    "DayOfWeek",
+    "Solar_Radiation_Wm2",
+    "roll_max_168",
+    "lag_48"
+  ],
+  "runtime_seconds": 1.59,
+  "seed": 42,
+  "synthetic_data": true,
+  "timestamp": "2026-10-01T06:00:12.965613+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "region_a",
+  "rows_before": 26315,
+  "rows_after_cleaning": 26280,
+  "train_rows": 18278,
+  "validation_rows": 3917,
+  "test_rows": 3917,
+  "top_features": [
+    "lag_168",
+    "lag_24",
+    "Hour",
+    "lag_1",
+    "dow_sin",
+    "hour_sin",
+    "hour_cos",
+    "Is_Holiday",
+    "Electricity_Price",
+    "Is_Weekend",
+    "DayOfWeek",
+    "dow_cos",
+    "roll_min_6",
+    "lag_48",
+    "roll_max_6"
+  ],
+  "runtime_seconds": 1.54,
+  "seed": 42,
+  "synthetic_data": true,
+  "timestamp": "2026-10-01T05:58:44.640938+00:00"
+}
