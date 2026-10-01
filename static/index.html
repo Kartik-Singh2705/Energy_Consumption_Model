@@ -23,7 +23,13 @@
 <script>
 let state={};const $=id=>document.getElementById(id);const esc=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));$(b.dataset.tab).classList.add('active')});
-async function getJSON(url,opts){let r=await fetch(url,opts);if(!r.ok)throw new Error(await r.text());return r.json()}function fmt(x,n=2){return x==null?'—':Number(x).toLocaleString(undefined,{maximumFractionDigits:n})}
+const API_BASE = "https://energy-consumption-model.onrender.com";
+
+async function getJSON(url, opts) {
+    let r = await fetch(API_BASE + url, opts);
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+}
 function table(el,cols,rows){if(!rows||!rows.length){$(el).innerHTML='<div class="empty">No results yet.</div>';return}let h='<table><thead><tr>'+cols.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr></thead><tbody>';rows.forEach(r=>h+='<tr>'+cols.map(c=>'<td>'+esc(r[c])+'</td>').join('')+'</tr>');$(el).innerHTML=h+'</tbody></table>'}
 function drawChart(rows){if(!rows?.length){$('forecastChart')?.replaceChildren();return} }
 async function loadDatasets(){let ds=await getJSON('/api/datasets');$('dataset').innerHTML=ds.map(x=>`<option value="${x.id}">${esc(x.name)} • ${esc(x.scale)}</option>`).join('');table('datasetTable',['name','scale','rows','columns','start','end'],ds);await loadResult();}
