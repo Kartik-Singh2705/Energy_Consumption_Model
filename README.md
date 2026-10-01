@@ -32,3 +32,5 @@ Open http://127.0.0.1:8000
 The existing pipeline performs data validation/cleaning, lag and rolling feature creation, XGBoost feature scoring, test metrics, forecasts, and technical explainability. LSTM, GRU and CNN-LSTM training modules are included for development experiments.
 
 The supplied FRD states that this is a batch data and machine-learning pipeline, not a live grid-control system, and that synthetic data is for pipeline development rather than final reported results.
+## Dashboard Overview
+![alt text](image.png)
