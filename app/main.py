@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
@@ -7,6 +8,13 @@ import pandas as pd, json, subprocess, sys, numpy as np, joblib
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'; OUT=ROOT/'outputs'; MODELS=ROOT/'models'
 app=FastAPI(title='Energy Forecasting Studio', version='2.0')
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.mount('/static', StaticFiles(directory=ROOT/'static'), name='static')
 
 DATASETS={
